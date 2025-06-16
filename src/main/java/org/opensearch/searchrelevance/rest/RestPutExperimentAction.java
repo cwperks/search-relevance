@@ -89,7 +89,6 @@ public class RestPutExperimentAction extends BaseRestHandler {
                     builder.field("experiment_id", response.getId());
                     builder.field("experiment_result", response.getResult());
                     builder.endObject();
-                    System.out.println("Experiment created successfully: " + response.getId() + " - " + response.getResult());
                     channel.sendResponse(new BytesRestResponse(RestStatus.OK, builder));
                 } catch (IOException e) {
                     onFailure(e);
@@ -98,7 +97,6 @@ public class RestPutExperimentAction extends BaseRestHandler {
 
             @Override
             public void onFailure(Exception e) {
-                System.out.println("error creating experiment: " + e.getMessage());
                 try {
                     channel.sendResponse(new BytesRestResponse(channel, RestStatus.INTERNAL_SERVER_ERROR, e));
                 } catch (IOException ex) {
