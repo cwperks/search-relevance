@@ -72,18 +72,11 @@ import lombok.SneakyThrows;
 
 @ThreadLeakScope(ThreadLeakScope.Scope.NONE)
 public class BaseSearchRelevanceIT extends OpenSearchRestTestCase {
-    private static final String PROTOCOL_HTTP = "http";
-    private static final String PROTOCOL_HTTPS = "https";
-    private static final String SYS_PROPERTY_KEY_HTTPS = "https";
-    private static final String SYS_PROPERTY_KEY_CLUSTER_ENDPOINT = "tests.rest.cluster";
     private static final String SYS_PROPERTY_KEY_USER = "user";
     private static final String SYS_PROPERTY_KEY_PASSWORD = "password";
     private static final String DEFAULT_SOCKET_TIMEOUT = "60s";
     private static final String INTERNAL_INDICES_PREFIX = ".";
     public static final String DEFAULT_USER_AGENT = "Kibana";
-    private static String protocol;
-
-    protected static final Locale LOCALE = Locale.ROOT;
 
     protected final ClassLoader classLoader = this.getClass().getClassLoader();
 
