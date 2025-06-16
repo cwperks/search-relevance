@@ -194,7 +194,6 @@ public class BaseSearchRelevanceIT extends OpenSearchRestTestCase {
                 } catch (URISyntaxException e) {
                     throw new RuntimeException(e);
                 }
-                System.out.println("uri: " + uri);
                 Path configPath = PathUtils.get(uri).getParent().toAbsolutePath();
                 return new SecureRestClientBuilder(settings, configPath, hosts).build();
             } else {
