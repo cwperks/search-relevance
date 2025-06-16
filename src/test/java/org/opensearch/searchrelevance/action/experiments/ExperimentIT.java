@@ -139,7 +139,7 @@ public class ExperimentIT extends BaseSearchRelevanceIT {
     ) throws IOException {
         String getExperimentByIdUrl = String.join("/", EXPERIMENT_INDEX, "_doc", experimentId);
         Response getExperimentResponse = makeRequest(
-            client(),
+            adminClient(),
             RestRequest.Method.GET.name(),
             getExperimentByIdUrl,
             null,
