@@ -293,7 +293,7 @@ def securityPluginFile = resolvePluginFile("opensearch-security")
 
 // === Setup security test ===
 // This flag indicates the existence of security plugin
-def securityEnabled = System.getProperty("security.enabled", "false") == "true"
+def securityEnabled = System.getProperty("security.enabled", "false") == "true" || System.getProperty("security", "false") == "true" || System.getProperty("https", "false") == "true"
 
 // Set up integration test clusters, installs all zipArchive dependencies and Flow Framework
 testClusters.integTest {
