@@ -96,7 +96,7 @@ ext {
             dest local
             overwrite false
         }
-        processResources {
+        processTestResources {
             from(local)
         }
     }
